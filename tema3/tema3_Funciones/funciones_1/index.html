@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ 
+<!-- Creamos una caja de texto para mostrar la tabla de multiplicar -->
+<input type="text" id="tabla" value="" >
+<br>
+
+
+</body>
+<script>
+
+
+    function mostrarTablaMultiplicar(numero) {
+        // Obtenemos el elemento del DOM
+        const elementoTabla = document.getElementById('tabla');
+      
+        // Creamos una cadena de texto con la tabla de multiplicar
+        let tabla = 'Tabla de multiplicar del ' + numero + ':\n';
+        for (let i = 1; i <= 10; i++) {
+          const resultado = numero * i;
+          tabla += `${numero} x ${i} = ${resultado}    \n `;
+  
+         }
+      
+        // Modificamos el contenido del elemento del DOM con la tabla de multiplicar
+        elementoTabla.value = tabla;
+      }
+      numero=prompt("elige el numero")
+      numero = parseInt(numero);
+
+      // Ejemplo de uso de la función
+      mostrarTablaMultiplicar(numero);
+      </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <script>
+        //Este programa pedirá al usuario que ingrese su edad, la convertirá a un entero y luego verificará si se cumplen las condiciones especificadas en cada bloque if. Si se cumple la condición, se imprimirá el mensaje correspondiente. Si no se cumple la condición, se evaluará la siguiente condición.
+
+        // Espero que esto le ayude a crear el programa que necesita. Si tiene más preguntas o necesita más ayuda, no dude en preguntar.
+        // Pedimos al usuario que ingrese su edad
+        let edad = prompt("Ingrese su edad: ");
+
+        // Convertimos la edad a un entero
+        edad = parseInt(edad);
+
+        // Verificamos si la persona es menor de edad
+        if (edad < 18) {
+            console.log("Eres menor de edad.");
+        }
+        // Verificamos si la persona es mayor de edad
+        else if (edad >= 18 && edad < 65) {
+            console.log("Eres mayor de edad.");
+        }
+        // Verificamos si la persona está en edad de la jubilación
+        else {
+            console.log("Estás en edad de jubilación.");
+        }
+    </script>
+</body>
+
+</html>

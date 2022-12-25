@@ -1,0 +1,11 @@
+body{
+    color: rgb(34, 34, 34);
+    font-family: sans-serif;
+}
+
+.seleccionado {
+    color: #777
+}
+.seleccionado b {
+    color: #0
+}

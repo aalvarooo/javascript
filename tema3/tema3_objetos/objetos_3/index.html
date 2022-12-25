@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const cars = [{
+                make: 'Toyota',
+                model: 'Corolla',
+                year: 2020
+            },
+            {
+                make: 'Ford',
+                model: 'Fiesta',
+                year: 2018
+            },
+            {
+                make: 'Honda',
+                model: 'Accord',
+                year: 2016
+            },
+            {
+                make: 'Tesla',
+                model: 'Model 3',
+                year: 2019
+            }
+        ];
+        cars[0].color = 'red';
+        console.log(cars);
+
+
+        function showCarsTable(cars) {
+            document.write('<table>');
+            document.write('<tr>');
+            document.write('<th>Make</th>');
+            document.write('<th>Model</th>');
+            document.write('<th>Year</th>');
+            document.write('<th>Color</th>');
+
+            document.write('</tr>');
+
+            for (let i = 0; i < cars.length; i++) {
+                const car = cars[i];
+                document.write('<tr>');
+                document.write(`<td>${car.make}</td>`);
+                document.write(`<td>${car.model}</td>`);
+                document.write(`<td>${car.year}</td>`);
+                document.write(`<td>${car.color}</td>`);
+
+                document.write('</tr>');
+            }
+
+            document.write('</table>');
+        }
+        showCarsTable(cars);
+    
+         /*Crea un array con 4 coches.
+    Crea un fichero js con una función que muestra por pantalla tabla generada dinámicamente con los elementos de los
+    objetos de un array.
+    Ejemplo:*/
+    </script>
+   
+</body>
+</html>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+
+
+    function compruebaEmail(e) {
+        if (!esEmailValido(this.value)) alert('no es un email');
+
+
+    }
+
+    function esEmailValido(email) {
+        //comprueba que tiene caracteres, im arroba maximo 1
+        //caracteres un punto y más caracteres alfanumericos
+
+        if (/\w+\@+\.\w{1,4}/.test(email)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+
+    function compruebaDNI(e){
+        if(!validarDNI(this.value))alert('no es un dni');
+    }
+
+    function validarDNI(dni){
+        var letras = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+
+        if(!/\[0-9]{8}+[AZ]{1}/.test(dni)){
+
+            return false;
+        }
+
+        if(dni.charAT(0)  != letras[(dni.substing(0,8))%23] ){
+            return false;
+        }
+        return true;
+
+
+
+        }
+        function comprouebaMovil(){
+            if(!validaMovil(this.value))alert('no es un movil');
+
+
+
+        }
+        function validaMovil(movil){
+            if(!/(6|7)\d{8}/.test(movil)){
+                return false;
+            }
+            
+                return true;
+            }
+        
+    
+
+
+
+
+    function asignarEventos(){
+
+        document.getElementById('email').addEventListener('blur', compruebaEmail);
+        document.getElementById('dni').addEventListener('blur', compruebaDNI);
+        document.getElementById('movil').addEventListener('blur', comprouebaMovil)
+    }
+    document.addEventListener('readystatechange', asignarEventos);
+
+</script>
+
+<body>
+    <form>
+        <label for="email"> Correo electrónico</label>
+       
+        <input type="text" id="email" />
+        <br>        <br>
+        <br>
+
+        <label for="dni">dni
+            <input type="text" id="dni" />
+
+
+
+        </label>
+<br>        <br>
+<br>
+
+        <label for="movil">movil
+            <input type="text" id="movil">
+
+        </label>
+        <br>
+        <br>
+
+        <input type='submit' value='enviar'>
+
+        </label>
+    </form>
+</body>
+
+</html>

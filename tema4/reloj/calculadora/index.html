@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./sources/style.css">
+</head>
+
+<body>
+    <form name="formulario" id="formulario">
+        
+
+        <label for="nombre">
+             Nombre: 
+        </label>
+        
+   <input type="text" id="nombre" name="nombre" />
+   
+        <label for="apellidos">
+             Apellidos: 
+        </label>
+        <tr>
+            <td>
+                <input type="Button" id="1" value="1" class="boton"  ">
+            </td>
+            <td>
+                <input type="Button" id="2" value="2" class="boton"  ">
+            </td>
+            <td>
+                <input type="Button" id="3" value="3" class="boton"  ">
+            </td>
+            <td>
+                <input type="Button" id="igual" value="=" class="boton funcion"  ">
+            </td>
+        </tr>
+        <tr>
+   
+   <input type="text" id="apellidos" name="apellidos" />
+   
+        <label for="provincia">
+             Provincia: 
+        </label>
+   
+        <input type="text" id="provincia" name="provincia" />
+   
+        <input type="button" id="enviar" value="Enviar" />
+   </form>
+   
+   <script type="text/javascript">
+   
+   function cambiar(evt)
+   {
+        if (evt.keyCode==13)  // Código de la tecla Enter
+             if (this.nextSibling.nextSibling.type=="text")
+                  this.nextSibling.nextSibling.focus();
+   }
+   
+   var inputs=document.getElementsByTagName("input");
+   
+   for (i=0; i<inputs.length; i++)
+   {
+        inputs[i].addEventListener("keypress",cambiar,false);
+   }
+   
+   </script>
+
+    <script src="./sources/index.js"></script>
+</body>

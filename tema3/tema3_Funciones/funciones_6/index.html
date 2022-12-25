@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // función que calcula un número de la serie de Fibonacci
+function fibonacci(n) {
+  // caso base: si el número es menor o igual a 1, el resultado es 1
+  if (n <= 1) {
+    return 1;
+  }
+  // caso recursivo: se suman los dos números anteriores de la serie
+  else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+// ejemplos de uso de la función
+console.log(fibonacci(0)); // 1
+console.log(fibonacci(1)); // 1
+console.log(fibonacci(2)); // 2
+console.log(fibonacci(3)); // 3
+console.log(fibonacci(4)); // 5
+console.log(fibonacci(5)); // 8
+    /*En este ejemplo, la función fibonacci utiliza una estructura de control de flujo (una sentencia if) para determinar si el número es menor o igual a 1. Si es así, se devuelve 1 (caso base). Si el número es mayor que 1, se utiliza la recursividad para sumar los dos números anteriores de la serie.
+    </script>
+</body>
+
+</html>

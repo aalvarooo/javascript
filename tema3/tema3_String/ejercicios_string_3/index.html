@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+// función que determina si un número es impar
+function esImpar(numero) {
+  return numero % 2 !== 0;
+}
+
+// función que comprueba si una cadena numérica contiene números impares
+function contieneNumerosImpares(cadena) {
+  // utilizamos el método split() para dividir la cadena en un array de caracteres
+  const caracteres = cadena.split('');
+  // utilizamos el método map() para convertir cada caracter en un número
+  const numeros = caracteres.map(c => Number(c));
+  // utilizamos el método some() para comprobar si algún número es impar
+  return numeros.some(esImpar);
+}
+
+// ejemplos de uso de la función
+console.log(contieneNumerosImpares('1234567890')); // true
+console.log(contieneNumerosImpares('02468')); // false
+console.log(contieneNumerosImpares('13579')); // true
+console.log(contieneNumerosImpares('135792468')); // true
+console.log(contieneNumerosImpares('123456789')); // false
+    
+    /*En este ejemplo, la función esImpar determina si un número es impar comprobando si el resto de su división por 2 es distinto de 0. La función contieneNumerosImpares utiliza el método split() para dividir la cadena en un array de caracteres, el método map() para convertir cada caracter en un número y el método some() para comprobar si algún número es impar utilizando la función esImpar.
+    *
+    map(): este método recibe una función como argumento y aplica esa función a cada uno de los elementos del array. La función se ejecuta con cada elemento del array como argumento y debe devolver un valor, que se utilizará para crear un nuevo array con los resultados de la función aplicada a cada elemento.
+some(): este método recibe una función como argumento y aplica esa función a cada uno de los elementos del array hasta que la función devuelve true para algún elemento. Si se encuentra algún elemento para el que la función devuelve true, el método some() devuelve true, en caso contrario devuelve false.
+    
+    /
+    </script>
+</body>
+</html>

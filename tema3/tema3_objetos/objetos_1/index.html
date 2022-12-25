@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*
+A continuación se muestra un ejemplo de cómo puedes definir un constructor de objeto para el objeto Coche que tenga las propiedades marca, modelo y año:
+
+    */
+
+        class Coche {
+            // El constructor de objeto recibe los valores de las propiedades como argumentos
+            constructor(marca, modelo, año) {
+                // Asignamos los valores de los argumentos a las propiedades del objeto
+                this.marca = marca;
+                this.modelo = modelo;
+                this.año = año;
+            }
+        }
+
+        // Creamos un nuevo objeto Coche utilizando el constructor
+        let miCoche = new Coche("Ford", "Focus", 2020);
+
+        // Accedemos a las propiedades del objeto
+        console.log(miCoche.marca); // Muestra "Ford" en la consola
+        console.log(miCoche.modelo); // Muestra "Focus" en la consola
+        console.log(miCoche.año); // Muestra 2020 en la consola
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+    // función que invierte un número
+function invertirNumero(numero) {
+  // caso base: si el número es menor que 10, no es necesario invertir
+  if (numero < 10) {
+    return numero;
+  }
+  // caso recursivo: dividimos el número en dos partes: el último dígito y el resto
+  // del número. Invertimos el resto del número y lo concatenamos con el último
+  // dígito
+  else {
+    return invertirNumero(Math.floor(numero / 10)) + (numero % 10);
+  }
+}
+
+// ejemplos de uso de la función
+console.log(invertirNumero(123)); // 321
+console.log(invertirNumero(456)); // 654
+console.log(invertirNumero(789)); // 987
+console.log(invertirNumero(1234)); // 4321
+    /*
+    Para programar un algoritmo recursivo que permita invertir un número en JavaScript, puedes utilizar el siguiente código como guía:
+
+Copy code
+// función que invierte un número
+function invertirNumero(numero) {
+  // caso base: si el número es menor que 10, no es necesario invertir
+  if (numero < 10) {
+    return numero;
+  }
+  // caso recursivo: dividimos el número en dos partes: el último dígito y el resto
+  // del número. Invertimos el resto del número y lo concatenamos con el último
+  // dígito
+  else {
+    return invertirNumero(Math.floor(numero / 10)) + (numero % 10);
+  }
+}
+
+// ejemplos de uso de la función
+console.log(invertirNumero(123)); // 321
+console.log(invertirNumero(456)); // 654
+console.log(invertirNumero(789)); // 987
+console.log(invertirNumero(1234)); // 4321
+En este ejemplo, la función invertirNumero utiliza una estructura de control de flujo (una sentencia if) para determinar si el número es menor que 10. Si es así, se devuelve el número sin invertir (caso base). Si el número es mayor o igual a 10, se utiliza la recursividad para dividir el número en dos partes: el último dígito y el resto del número. Luego se invierte el resto del número y se concatena con el último dígito.
+  /*
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+		<style>
+		</style>
+		    <body>
+                <script>
+                    function avisa(e){
+                        var acepta = confirm ('Atención: se van a limpiar los datos del formulario');
+                        if (!acepta)
+                            e.preventDefault();
+                    }
+                
+                    function comprueba(e){
+                        if (document.getElementById('nombre').value == ""){
+                            alert ('No ha metido ningún dato');
+                            document.getElementById('nombre').focus();
+                            e.preventDefault();
+                        }
+                    }
+                    function asignarEventos(){
+                        document.getElementById('miForm').addEventListener('reset', avisa);
+                        document.getElementById('miForm').addEventListener('submit', comprueba);
+                    }
+                    document.addEventListener('readystatechange', asignarEventos);
+                </script>
+                
+                <center>
+                    <br><hr><br>
+                    El evento se dispara cuando se pulse el bot&oacute;n de 'Limpiar'
+                    <form id='miForm'>
+                        Nombre: <input type='text' size='10'><br><br>
+                        <input type='reset' value='Limpiar'>
+                        <input type='submit' value='Enviar'>   
+                    </form>
+                    <br><hr><br>
+                </center>      
+            </body>
+            
+        
+	
+</html>

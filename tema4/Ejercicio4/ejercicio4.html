@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            border : 2px solid black;
+
+        }
+    </style>
+    <script>
+        function envioDatos(){
+            var cliente = "El cliente: ";
+            var articulo = "Ha comprado";
+            var Dirección = "será enviado a";
+            cliente += document.getElementById('nombre').value +" ";
+            articulo += document.getElementById('cantidad').value + " ";
+            articulo +=
+            document.getElementById('modelo').value + " ";
+            articulo += document.getElementById('modelo').value + " ";
+            articulo += 
+            document.getElementById('modelo').value + " ";
+            var rbtTalla = document.getElementById("talla");
+            for (i=0; i< rbtTalla.length; i++){
+                if (rbtTalla[i].checked){
+                articulo += rbtTalla[i].value + " ";
+                break;
+            }
+        }
+
+        dirección += document.getElementById('direccion').value + " ";
+        dirección += document.getElementById('cp').value + " ";
+        dirección += document.getElementById('pais').value + " ";
+
+        alert(cliente + articulo + dirección);
+    }
+    function asignarEventos(evento){
+        if (document.readyState == 'complete'){
+            document.getElementById("frmPedido").addEventListener('submit, envioDatos');
+        }
+        }
+    
+
+    document.addEventListener('readystatechange', asignarEventos);
+    
+
+    </script>
+</head>
+<body>
+    
+
+    <form method="post" name="frmPedido" id="frmPedido">
+        <fieldset>
+            <legend>Cliente</legend>
+            <label>Nombre y apellidos:</label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <label> Dirección:</label>
+            <input type="text" id="Dirección" name="Dirección">
+            <br>
+            <label> Codigo postal:</label>
+            <input type="text" id="pais" readonly name="pais"value="España">
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Pedido</legend>
+            <label>Modelo:</label><input type="text" readonly name="modelo" value="Road 66" id="modelo">
+            <br>
+            <label>Talla: <br></label>
+            <input type="radio" name="talla" value="S" id="s">S
+            <br>
+            <input type="radio" name="talla" value="M" id="m">M
+            <br>
+            <input type="radio" name="talla" value="L" id="l">L
+            <br>
+            <input type="radio" name="talla" value="XL" id="xl">XL
+            <br>
+            <label> Cantidad:</label><input type="text" id="cantidad" value="1">
+            <br>
+
+
+
+        </fieldset>
+        <br>
+        <input type="submit" value="Realizar pedido">
+        <input type="reset" value="Anular">
+
+    </form>
+</body>
+</html>

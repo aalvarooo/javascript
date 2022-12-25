@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+ /*Para crear un pequeño script que calcule la letra correspondiente del NIF a partir del número del DNI, puedes utilizar JavaScript y seguir los siguientes pasos:
+
+Crea una función que tome como parámetro el número del DNI y que devuelva la letra del NIF correspondiente.
+Dentro de la función, calcula el resto de la división del número del DNI entre 23.
+Utiliza una estructura de control de flujo, como una sentencia switch, para asignar la letra correspondiente al resto obtenido. Puedes utilizar la tabla proporcionada como guía.
+Devuelve la letra del NIF correspondiente utilizando la sentencia return.
+Aquí tienes un ejemplo de cómo podría quedar el código:*/
+
+function obtenerLetraNIF(dni) {
+  // Calculamos el resto de la división del número del DNI entre 23
+  const resto = dni % 23;
+
+  // Asignamos la letra del NIF correspondiente en base al resto obtenido
+  let letraNIF;
+  switch (resto) {
+    case 0:
+      letraNIF = 'T';
+      break;
+    case 1:
+      letraNIF = 'R';
+      break;
+    case 2:
+      letraNIF = 'W';
+      break;
+    case 3:
+      letraNIF = 'A';
+      break;
+    case 4:
+      letraNIF = 'G';
+      break;
+    case 5:
+      letraNIF = 'M';
+      break;
+    case 6:
+      letraNIF = 'Y';
+      break;
+    case 7:
+      letraNIF = 'F';
+      break;
+    case 8:
+      letraNIF = 'P';
+      break;
+    case 9:
+      letraNIF = 'D';
+      break;
+    case 10:
+      letraNIF = 'X';
+      break;
+    case 11:
+      letraNIF = 'B';
+      break;
+    case 12:
+      letraNIF = 'N';
+      break;
+    case 13:
+      letraNIF = 'J';
+      break;
+    case 14:
+      letraNIF = 'Z';
+      break;
+    case 15:
+      letraNIF = 'S';
+      break;
+    case 16:
+      letraNIF = 'Q';
+      break;
+    case 17:
+      letraNIF = 'V';
+      break;
+    case 18:
+      letraNIF = 'H';
+      break;
+    case 19:
+      letraNIF = 'L';
+      break;
+    case 20:
+      letraNIF = 'C';
+      break;
+    case 21:
+      letraNIF = 'K';
+      break;
+    case 22:
+      letraNIF = 'E';
+      break;
+  }
+
+  // Devolvemos la letra del NIF
+  return letraNIF;
+}
+
+
+ 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>function aleatorio(limiteInferior, limiteSuperior) {
+        // Calculamos el rango de números comprendido entre los dos límites
+        let rango = limiteSuperior - limiteInferior + 1;
+      
+        // Generamos un número aleatorio comprendido entre 0 y el rango
+        let numeroAleatorio = Math.random() * rango;
+      
+        // Redondeamos el número hacia abajo y lo convertimos a entero
+        let numeroEntero = Math.floor(numeroAleatorio);
+      
+        // Sumamos el límite inferior al número entero para obtener el resultado final
+        let resultado = numeroEntero + limiteInferior;
+      
+        // Mostramos el resultado en el navegador
+        document.write(resultado);
+      }
+      
+      // Probar la función
+      aleatorio(5, 10); // Muestra un número entero entre 5 y 10 (inclusive) en el navegador
+      //aleatorio(-10, 10); // Muestra un número entero entre -10 y 10 (inclusive) en el navegador
+      
+
+      /*En el cálculo del rango de números comprendido entre los dos límites en la función aleatorio(), se suma +1 para asegurar que el límite superior esté incluido en el rango.
+
+Cuando se utiliza la función Math.random() para generar un número aleatorio comprendido entre 0 y un límite superior, el límite superior no está incluido en el rango de números posibles. Por ejemplo, si se utiliza Math.random() para generar un número aleatorio comprendido entre 0 y 10, el número 10 no estará incluido en el rango.
+
+Por lo tanto, para incluir el límite superior en el rango, es necesario sumar +1 al cálculo del rango. De esta manera, el límite superior pasa a estar incluido en el rango y es posible generar un número aleatorio que pueda ser igual al límite superior.*/
+      
+      </script>
+</body>
+</html>

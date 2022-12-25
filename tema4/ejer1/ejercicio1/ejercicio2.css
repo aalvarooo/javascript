@@ -1,0 +1,23 @@
+html {
+    background: #fff7f6;
+  }
+  
+  /*-- --*/
+  .container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+  }
+  .item {
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    padding: 3rem;
+    background: mistyrose;
+    border: 3px solid tomato;
+    color: tomato;
+    margin: 6px;
+  }
+
+
+

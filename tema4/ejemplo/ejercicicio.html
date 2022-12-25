@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM</title>
+        <script>               
+            function comprobarEstado(e){
+                var combo=document.getElementById("color");
+                if (combo.value == null||combo.value ==""){
+                    alert("Por favor, seleciona tu color favorito");
+                    e.preventDefault();
+                }
+            }
+            function asignarEventos(evento){
+                 if (document.readyState == 'complete'){
+                     document.getElementById('frm').addEventListener('submit', comprobarEstado);                                        
+                 }
+             }
+             document.addEventListener('readystatechange',asignarEventos);            
+         </script> 
+         
+        
+        
+        
+        
+        <body>
+            <form method="get" id="frm">
+                <span id="col">
+                    Color: <select name="color" id="color">
+                        <option value=""> Seleccione su color favorito </option>
+                        <option value="rojo">Rojo</option>
+                        <option value="verde">Verde</option>
+                        <option value="azul">Azul</option>
+                        <option value="amarillo">Amarillo</option>
+                        <option value="ninguno">Ninguno de los anteriores</option>                    
+                    </select>
+                </span>
+                <input type="submit" value="Enviar">
+            </form>
+            
+            
+            
+        </body>
+        
+    
+</html>

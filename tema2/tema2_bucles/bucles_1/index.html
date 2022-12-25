@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+<script>
+
+ /*
+ Para crear un programa en JavaScript que pida un número y muestre cuántas veces se tiene que sumar el número hasta llegar a cien, podemos utilizar un bucle while. A continuación, se presenta un ejemplo de cómo podría hacerse:
+
+    */
+
+ 
+ // Pedimos al usuario que ingrese un número
+let numero = prompt("Ingrese un número: ");
+
+// Convertimos el número a un entero
+numero = parseInt(numero);
+
+// Inicializamos un contador en cero
+let contador = 0;
+
+// Inicializamos un acumulador en cero
+let acumulador = 0;
+
+// Mientras el acumulador sea menor que 100, seguimos sumando
+while (acumulador < 100) {
+    // Sumamos el número al acumulador
+    acumulador += numero;
+    // Incrementamos el contador en una unidad
+    contador++;
+}
+
+// Mostramos el resultado
+console.log(`Se deben sumar ${contador} veces el número ${numero} para llegar a 100.`);
+</script>
+   
+ </body>
+ </html>

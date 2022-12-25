@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      /*
+Aquí tienes un ejemplo de cómo podrías hacer un programa en JavaScript que pinte un tablero de ajedrez de 8x8 casillas utilizando dos bucles "for" anidados:
+
+      */
+
+
+      // Pedir al usuario el ancho de la celda
+const cellWidth = prompt("Ingresa el ancho de la celda:");
+
+// Crear una tabla HTML con 8 filas y 8 columnas
+let tableHTML = "<table>";
+for (let row = 0; row < 8; row++) {
+  tableHTML += "<tr>";
+  for (let col = 0; col < 8; col++) {
+    // Alternar el color de las casillas para crear el patrón de ajedrez
+    if ((row + col) % 2 === 0) {
+      tableHTML += `<td style="width: ${cellWidth}px; height: ${cellWidth}px; background-color: white"></td>`;
+    } else {
+      tableHTML += `<td style="width: ${cellWidth}px; height: ${cellWidth}px; background-color: black"></td>`;
+    }
+  }
+  tableHTML += "</tr>";
+}
+tableHTML += "</table>";
+
+// Agregar la tabla al documento HTML
+document.body.innerHTML = tableHTML;
+
+/*Este código crea una tabla HTML con 8 filas y 8 columnas, y utiliza una combinación de bucles "for" anidados para recorrer todas las casillas del tablero. Dentro de cada casilla, se establece el ancho y el alto en el valor que se ha solicitado al usuario y se alterna el color de fondo entre blanco y negro para crear el patrón de ajedrez. Al final, se agrega la tabla al cuerpo del documento HTML.*/
+ 
+
+   </script>
+</body>
+</html>
+

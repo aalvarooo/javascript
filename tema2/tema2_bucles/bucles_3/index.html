@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*Para crear un programa en JavaScript que pida tres valores por teclado y pinte una tabla HTML de una fila con el número de columnas especificado en la página web, podemos utilizar la función prompt() para solicitar los valores al usuario y la función document.write() para escribir el código HTML de la tabla en la página. A continuación, se presenta un ejemplo de cómo podría hacerse:
+*/
+// Pedimos al usuario que ingrese el número de columnas
+let numColumnas = prompt("Ingrese el número de columnas: ");
+
+// Convertimos el número de columnas a un entero
+numColumnas = parseInt(numColumnas);
+
+// Pedimos al usuario que ingrese la altura de las celdas
+let altura = prompt("Ingrese la altura de las celdas (en pixels): ");
+
+// Pedimos al usuario que ingrese el ancho de las celdas
+let ancho = prompt("Ingrese el ancho de las celdas (en pixels): ");
+
+// Creamos el código HTML de la tabla
+let tabla = "<table>";
+tabla += "<tr>";
+for (let i = 0; i < numColumnas; i++) {
+    tabla += `<td style="height: ${altura}; width: ${ancho}">Columna ${i+1}</td>`;
+}
+tabla += "</tr>";
+tabla += "</table>";
+
+// Escribimos el código HTML de la tabla en la página
+document.write(tabla);
+
+
+/*
+Este programa solicita al usuario que ingrese el número 
+de columnas, la altura y el ancho de las celdas y luego 
+utiliza un bucle for para crear el código HTML de la tabla. La variable numColumnas se utiliza para controlar el número de columnas de la tabla y las variables altura y ancho se utilizan para especificar las dimensiones de las celdas. Una vez que se ha creado el código HTML de la tabla, 
+se utiliza la función document.write() para 
+escribir la tabla en la página web.
+*/
+    </script>
+</body>
+</html>

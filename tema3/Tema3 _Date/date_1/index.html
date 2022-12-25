@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // función que realiza una pregunta y calcula el tiempo que tarda en responder
+        function hacerPregunta(pregunta) {
+            // mostramos la pregunta en pantalla
+            console.log(pregunta);
+
+            // iniciamos una variable para almacenar el tiempo de inicio
+            const inicio = Date.now();
+
+            // esperamos a que el usuario responda
+            const respuesta = prompt('Escribe tu respuesta');
+
+            // calculamos el tiempo de finalización
+            const fin = Date.now();
+
+            // mostramos la respuesta en pantalla
+            console.log(`Respuesta: ${respuesta}`);
+
+            // calculamos el tiempo transcurrido en milisegundos
+            const tiempoTranscurrido = fin - inicio;
+
+            // mostramos el tiempo transcurrido en pantalla
+            console.log(`Tiempo transcurrido: ${tiempoTranscurrido} milisegundos`);
+        }
+
+        // ejemplo de uso de la función
+        hacerPregunta('¿Cuál es tu nombre?');
+
+
+        /*En este ejemplo, la función hacerPregunta muestra una pregunta en pantalla y utiliza la función prompt() para pedir una respuesta al usuario. Luego, utiliza la clase Date y el método now() para calcular el tiempo de inicio y finalización de la respuesta y mostrar el tiempo transcurrido en milisegundos.*/
+    </script>
+
+</body>
+
+</html>

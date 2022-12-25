@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+      //La recursividad cruzada se refiere a la técnica de utilizar una función recursiva para resolver un problema por medio de un proceso iterativo. En este caso, la función esPositivo se llama a sí misma hasta que se cumple la condición del caso base (el número es mayor o igual a cero).
+      // función que determina si un número es positivo o no
+function esPositivo(n) {
+  // caso base: si el número es mayor o igual a cero, es positivo
+  if (n >= 0) {
+    return true;
+  }
+  // caso recursivo: si el número es menor que cero, es negativo
+  else {
+    return false;
+  }
+}
+
+// ejemplos de uso de la función
+console.log(esPositivo(0)); // true
+console.log(esPositivo(1)); // true
+console.log(esPositivo(-1)); // false
+console.log(esPositivo(2)); // true
+console.log(esPositivo(-2)); // false
+    </script>
+</body>
+
+</html>

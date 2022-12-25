@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function aleatorioN(limiteSuperior) {
+            // Generamos un número aleatorio comprendido entre 0 y el límite superior
+            let numeroAleatorio = Math.random() * limiteSuperior;
+
+            // Redondeamos el número hacia abajo y lo convertimos a entero
+            let numeroEntero = Math.floor(numeroAleatorio);
+
+            // Mostramos el número entero en el navegador
+            document.write(numeroEntero);
+        }
+
+        // Probar la función
+
+
+        aleatorioN(10); // Muestra un número entero entre 0 y 10 en el navegador
+        /*En este ejemplo, la función aleatorioN() sigue funcionando de la misma manera que en el ejemplo anterior, generando un número aleatorio comprendido entre 0 y el límite superior y redondeándolo hacia abajo para obtener un entero. Sin embargo, en lugar de devolver el resultado, utiliza el método document.write() para escribirlo en la página web que se está mostrando en el navegador.
+          
+          */
+    </script>
+</body>
+
+</html>

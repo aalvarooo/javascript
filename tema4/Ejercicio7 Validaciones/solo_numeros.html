@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function comprueba(event) {
+        var evento = (event || window.event);
+        var codigoTecla = (evento.charCode || evento.keyCode);
+        var caracter=  String.fromCharCode(codigoTecla);
+        var nums = "51158771";
+        if(nums.indexOf(caracter) == -1){
+            alert('solo se permite numeros');
+        }
+    }
+
+    function asignarEventos(){
+        document.getElementById('alfan').addEventListener('keypress', comprueba);
+
+    }
+    document.addEventListener('readystatechange', asignarEventos);
+</script>
+<body>
+    <form id='miForm'>
+        <input type="text" size="10" id="alfan">
+        <br>
+        <br>
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body{
+    color: rgb(34, 34, 34);
+    font-family: sans-serif;
+}
+
+.contenedor1 {
+    padding: 30px;
+    background: red;
+}
+.contenedor2{
+    padding: 30px;
+    background: blue;
+}

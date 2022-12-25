@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*
+
+    Para crear una función que devuelva el IVA de un producto en función de un tipo de impuesto determinado, puedes utilizar una estructura de control de flujo, como una sentencia switch, para determinar cuál es el porcentaje de IVA a aplicar.
+
+Aquí tienes un ejemplo de cómo podrías hacerlo:
+    */
+    function calcularIVA(precio, tipo) {
+  let porcentajeIVA;
+  switch (tipo) {
+    case 0:
+    case 1:
+      porcentajeIVA = 0.21;
+      break;
+    case 2:
+      porcentajeIVA = 0.1;
+      break;
+    case 3:
+      porcentajeIVA = 0.04;
+      break;
+    default:
+      porcentajeIVA = 0.21;
+  }
+
+  const iva = precio * porcentajeIVA;
+  return iva;
+}
+
+// Ejemplos de uso de la función
+console.log(calcularIVA(100, 0)); // 21
+console.log(calcularIVA(100, 1)); // 21
+console.log(calcularIVA(100, 2)); // 10
+console.log(calcularIVA(100, 3)); // 4
+console.log(calcularIVA(100, 4)); // 21
+
+
+         /*En este ejemplo, la función calcularIVA toma dos argumentos: el precio del producto y el tipo de impuesto (0 para el tipo general, 1 para el tipo reducido y 2 para el tipo superred
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Para crear un programa en JavaScript que determine la calificación de un examen según la nota obtenida, podemos utilizar la estructura de control de flujo switch. A continuación, se presenta un ejemplo de cómo podría hacerse:
+
+
+
+// Pedimos al usuario que ingrese la nota del examen
+let nota = prompt("Ingrese la nota del examen: ");
+
+// Convertimos la nota a un número real
+nota = parseFloat(nota);
+
+// Evaluamos la nota utilizando switch
+switch (true) {
+    // Si la nota es menor que 5, es un suspenso
+    case nota < 5:
+        console.log("Suspenso");
+        break;
+    // Si la nota está entre 5 y 7 sin incluir, es un aprobado
+    case nota >= 5 && nota < 7:
+        console.log("Aprobado");
+        break;
+    // Si la nota está entre 7 y 9 sin incluir, es un notable
+    case nota >= 7 && nota < 9:
+        console.log("Notable");
+        break;
+    // Si la nota está entre 9 y 10 sin incluir, es un sobresaliente
+    case nota >= 9 && nota < 10:
+        console.log("Sobresaliente");
+        break;
+    // Si la nota es igual a 10, es una matrícula de honor
+    case nota == 10:
+        console.log("Matrícula de honor");
+        break;
+    // Si la nota es mayor que 10 o menor que 0, es un valor inválido
+    default:
+        console.log("Valor inválido");
+        break;
+}
+
+/*Este programa pedirá al usuario que ingrese la nota del examen, la convertirá a un número real y luego evaluará la nota utilizando la estructura switch. Si se cumple alguna de las condiciones especificadas en los casos, se imprimirá el mensaje correspondiente. Si no se cumple ninguna de las condiciones, se ejecutará el bloque de código especificado en el caso default.
+
+Espero que esto le ayude a crear el programa que necesita. Si tiene más preguntas o necesita más ayuda, no dude en preguntar.
+*/
+</script>
+</body>
+</html>

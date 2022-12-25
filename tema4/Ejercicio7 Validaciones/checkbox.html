@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function comprueba(e){
+
+
+    var id='chk1';
+    if(!ValidaCheck(id)){
+        alert('debe aceptar las condiciones');
+        e.preventDefault();
+    }
+}
+    function ValidaCheck(id){
+        var elemento =document.getElementById(id);
+        return (elemento.checked);
+    }
+
+function asignarEventos(){
+    document.getElementById('miForm').addEventListener('submit', comprueba);
+
+}
+document.addEventListener('readystatechange', asignarEventos);
+</script>
+<body>
+    <form id="miForm">
+        <label for="chk1">¿aceptas?</label>
+        <input type="checkbox" id="chk1" name="chk1" value="Y">
+        <br>
+
+        <input type="text" size="10" id="vacio">
+        <br>
+        <br>
+        <input type="submit" value="enviar">
+
+    </form>
+</body>
+</html>

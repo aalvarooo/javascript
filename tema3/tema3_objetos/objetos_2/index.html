@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Crear una tabla dinámica con los coches -->
+<table id="tabla-coches">
+    <caption>Lista de coches</caption>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Año</th>
+    </tr>
+  </table>
+  
+  <!-- Incluir el archivo JavaScript que contiene la función generarTablaCoches() -->
+  <script src="coches.js"></script>
+  
+  <!-- Incluir la hoja de estilos del archivo CSS -->
+  <link rel="stylesheet" href="estilos.css">
+  
+
+    <script>
+
+
+// Crear un array con 4 coches
+let coches = [
+  { marca: "Ford", modelo: "Focus", año: 2020 },
+  { marca: "Toyota", modelo: "Corolla", año: 2021 },
+  { marca: "Honda", modelo: "Civic", año: 2019 },
+  { marca: "Mazda", modelo: "3", año: 2018 }
+];
+
+// Definir una función que genere una tabla dinámica a partir del array de coches
+function generarTablaCoches() {
+  // Crear un elemento table
+  let tabla = document.createElement("table");
+
+  // Añadir un título a la tabla
+  let titulo = document.createElement("caption");
+  titulo.textContent = "Lista de coches";
+  tabla.appendChild(titulo);
+
+  // Crear un elemento tr para las cabeceras de la tabla
+  let filaCabeceras = document.createElement("tr");
+
+  // Crear tres elementos th para las cabeceras de la tabla
+  let cabeceraMarca = document.createElement("th");
+  let cabeceraMarca2 = document.createElement("th");
+  let cabeceraMarca3 = document.createElement("th");
+
+
+}
+generarTablaCoches();
+
+    </script>
+</body>
+</html>

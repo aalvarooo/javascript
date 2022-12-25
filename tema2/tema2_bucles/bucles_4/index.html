@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ /*
+Para modificar el programa anterior de manera que las columnas impares tengan un fondo negro y las pares fondo blanco, podemos agregar una condición if dentro del bucle for que evalúe si el índice de la columna es par o impar. Si el índice es par, se asignará al estilo de la celda el color de fondo blanco; si el índice es impar, se asignará el color de fondo negro. A continuación, se presenta un ejemplo de cómo podría hacerse:
+ */
+
+
+ // Pedimos al usuario que ingrese el número de columnas
+let numColumnas = prompt("Ingrese el número de columnas: ");
+
+// Convertimos el número de columnas a un entero
+numColumnas = parseInt(numColumnas);
+
+// Pedimos al usuario que ingrese la altura de las celdas
+let altura = prompt("Ingrese la altura de las celdas (en pixels): ");
+
+// Pedimos al usuario que ingrese el ancho de las celdas
+let ancho = prompt("Ingrese el ancho de las celdas (en pixels): ");
+
+// Creamos el código HTML de la tabla
+let tabla = "<table>";
+tabla += "<tr>";
+for (let i = 0; i < numColumnas; i++) {
+    // Si el índice de la columna es par, asignamos fondo blanco
+    if (i % 2 == 0) {
+        tabla += `<td style="height: ${altura}; width: ${ancho}; background-color: white">Columna ${i+1}</td>`;
+    }
+    // Si el índice de la columna es impar, asignamos fondo negro
+    else {
+        tabla += `<td style="height: ${altura}; width: ${ancho}; background-color: black">Columna ${i+1}</td>`;
+    }
+}
+tabla += "</tr>";
+tabla += "</table>";
+
+// Escribimos el código HTML de la tabla en la página
+document.write(tabla);
+
+
+/*
+Este programa funciona de manera similar al programa anterior, pero agrega una condición if dentro del bucle for que evalúa si el índice de la columna es par o impar. Si el índice es par, se asigna al estilo de la celda el color de fondo blanco; si el índice es impar, se asigna el color de fondo negro.
+*/
+
+
+    </script>
+</body>
+</html>

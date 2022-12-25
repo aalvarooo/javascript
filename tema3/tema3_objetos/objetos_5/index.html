@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+//        Para mostrar el array ordenado aleatoriamente por pantalla del navegador, puedes utilizar la función document.write() y escribir el HTML necesario para mostrar el array en una tabla.
+
+// Por ejemplo, si quieres mostrar el array de números shuffledNumbers en una tabla, puedes modificar la función shuffle() para que devuelva una tabla HTML en lugar del array ordenado aleatoriamente:
+
+// Copy code
+Array.prototype.shuffle = function() {
+  const shuffledArray = this.sort(() => Math.random() - 0.5);
+  
+  let tableHTML = '<table>';
+  tableHTML += '<tr>';
+  for (let i = 0; i < this.length; i++) {
+    tableHTML += `<td>${shuffledArray[i]}</td>`;
+  }
+  tableHTML += '</tr>';
+  tableHTML += '</table>';
+  
+  return tableHTML;
+};
+// Luego, para mostrar la tabla en la página, simplemente llama a la función shuffle() y pasa el resultado a document.write():
+
+// Copy code
+const numbers = [1, 2, 3, 4, 5];
+const shuffledNumbersHTML = numbers.shuffle();
+
+document.write(shuffledNumbersHTML);
+// Esto escribirá la tabla en la página y se mostrará en el navegador.
+
+// También puedes utilizar esta misma técnica para mostrar un array de objetos en una tabla. Por ejemplo, si quieres mostrar el array de coches shuffledCars en una tabla, puedes modificar la función shuffle() para que devuelva una tabla HTML con las propiedades de cada objeto del array:
+
+// Copy code
+Array.prototype.shuffle = function() {
+  const shuffledArray = this.sort(() => Math.random() - 0.5);
+  
+  let tableHTML = '<table>';
+  tableHTML += '<tr>';
+  tableHTML += '<th>Make</th>';
+  tableHTML += '<th>Model</th>';
+  tableHTML += '</tr>';
+  
+  for (let i = 0; i < this.length; i++) {
+    const car = shuffledArray[i];
+    tableHTML += '<tr>';
+    tableHTML += `<td>${car.make}</td>`;
+    tableHTML += `<td>${car.model}</td>`;
+    tableHTML += '</tr>';
+  }
+  
+  tableHTML += '</table>';
+  
+  return tableHTML;
+};
+// Luego, para mostrar la tabla en la página, simplemente llama a la función shuffle() y pasa el resultado a document.write():
+
+// Copy code
+ 
+    </script>
+</body>
+
+</html>

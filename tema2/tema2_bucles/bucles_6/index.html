@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Hacer un programa en JavaScript que usando dos bucles anidados for imprima por pantalla todas las tablas de multiplicar, con el formato adecuado.
+   
+
+        //Para crear un programa en JavaScript que imprima por pantalla todas las tablas de multiplicar utilizando dos bucles for anidados, podemos utilizar un bucle externo para recorrer los números del uno al diez y un bucle interno para recorrer los números del uno al diez y calcular el producto del número exterior por el número interior. A continuación, se presenta un ejemplo de cómo podría hacerse:
+        
+        // Recorremos los números del 1 al 10
+for (let i = 1; i <= 10; i++) {
+    // Imprimimos el título de la tabla de multiplicar
+    document.write(`<h1>Tabla del ${i}</h1>`);
+
+    // Recorremos los números del 1 al 10
+    for (let j = 1; j <= 10; j++) {
+        // Calculamos el producto del número exterior por el número interior
+        let producto = i * j;
+
+        // Imprimimos el producto
+        document.write(`${i} x ${j} = ${producto}<br>`);
+    }
+
+    // Imprimimos una línea en blanco después de cada tabla de multiplicar
+    document.write("<br>");
+}
+   /*
+   Este programa utiliza dos bucles for anidados para recorrer los números del uno al diez y calcular el producto de cada par de números. Luego, utiliza la función document.write() para imprimir el resultado en la página web. La variable i se utiliza para controlar el número exterior y la variable j se utiliza para controlar
+   */
+   </script>
+</body>
+</html>
+

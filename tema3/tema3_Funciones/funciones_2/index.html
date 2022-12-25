@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        /*
+
+    Para calcular la enésima potencia de un número dado sin utilizar la función Math.pow, puedes utilizar una estructura de control de flujo, como un bucle for, para multiplicar la base por sí misma el número de veces que indica el exponente.
+
+    Por ejemplo, aquí tienes una función que implementa este algoritmo para calcular la potencia de un número:
+    */
+        function potencia(base, exponente) {
+            let resultado = 1;
+            for (let i = 0; i < exponente; i++) {
+                resultado *= base;
+            }
+            return resultado;
+        }
+
+        // Ejemplo de uso de la función
+        const resultado = potencia(2, 3); // resultado = 8
+
+        function calcularPotencia() {
+            // Obtenemos los elementos del DOM
+            const elementoBase = document.getElementById('base');
+            const elementoExponente = document.getElementById('exponente');
+
+            // Obtenemos los valores de las cajas de texto
+         }
+    
+    </script>
+</body>
+
+</html>

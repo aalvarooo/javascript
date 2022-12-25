@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+    /*Para realizar una función que invierta el orden de los caracteres de una cadena en JavaScript utilizando el objeto String, puedes utilizar el siguiente código como guía:
+    */
+
+   // función que invierte el orden de los caracteres de una cadena
+function invertirCadena(cadena) {
+  // utilizamos el método split() para dividir la cadena en un array de caracteres
+  const caracteres = cadena.split('');
+  // utilizamos el método reverse() para invertir el orden de los elementos del array
+  caracteres.reverse();
+  // utilizamos el método join() para unir los elementos del array en una cadena
+  return caracteres.join('');
+}
+
+// ejemplos de uso de la función
+console.log(invertirCadena('Hola mundo!')); // !odnum aloH
+console.log(invertirCadena('Foo bar baz')); // zab rab ooF
+console.log(invertirCadena('abcdefg')); // gfedcba
+console.log(invertirCadena('1234567890')); // 0987654321
+//En este ejemplo, la función invertirCadena utiliza el método split() para dividir la cadena en un array de caracteres, el m
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        /*
+Para crear un programa en JavaScript que reciba un nú
+mero del uno al seis y muestre un encabezado con el 
+resultado elegido en el navegador, podemos utilizar 
+la estructura de control de flujo switch y la función
+ document.write(). A continuación, se presenta un 
+ ejemplo de cómo podría hacerse:
+*/
+
+        // Pedimos al usuario que ingrese un número del 1 al 6
+        let numero = prompt("Ingrese un número del 1 al 6: ");
+
+        // Convertimos el número a un entero
+        numero = parseInt(numero);
+
+        // Evaluamos el número utilizando switch
+        switch (numero) {
+            case 1:
+                document.write("<h1>Encabezado 1</h1>");
+                break;
+            case 2:
+                document.write("<h1>Encabezado 2</h1>");
+                break;
+            case 3:
+                document.write("<h1>Encabezado 3</h1>");
+                break;
+            case 4:
+                document.write("<h1>Encabezado 4</h1>");
+                break;
+            case 5:
+                document.write("<h1>Encabezado 5</h1>");
+                break;
+            case 6:
+                document.write("<h1>Encabezado 6</h1>");
+                break;
+                // Si el número es mayor que 6 o menor que 1, es un valor inválido
+            default:
+                document.write("<h1>No existe ese tipo de encabezado</h1>");
+                break;
+        }
+    </script>
+</body>
+
+</html>

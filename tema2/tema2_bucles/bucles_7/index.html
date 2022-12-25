@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*Para crear un programa en JavaScript que pida al usuario el número de columnas y filas de una tabla y la altura y anchura de sus celdas y luego genere una tabla HTML con esas especificaciones, podemos utilizar la función prompt() para solicitar los valores al usuario y la función parseInt() para convertirlos a enteros. A continuación, se presenta un ejemplo de cómo podría hacerse:
+        */
+     // Pedimos al usuario que ingrese el número de columnas
+let numColumnas = prompt("Ingrese el número de columnas: ");
+
+// Convertimos el número de columnas a un entero
+numColumnas = parseInt(numColumnas);
+
+// Pedimos al usuario que ingrese el número de filas
+let numFilas = prompt("Ingrese el número de filas: ");
+
+// Convertimos el número de filas a un entero
+numFilas = parseInt(numFilas);
+
+// Pedimos al usuario que ingrese la altura de las celdas
+let altura = prompt("Ingrese la altura de las celdas (en pixels): ");
+
+// Pedimos al usuario que ingrese el ancho de las celdas
+let ancho = prompt("Ingrese el ancho de las celdas (en pixels): ");
+
+// Creamos el código HTML de la tabla
+let tabla = "<table>";
+for (let i = 0; i < numFilas; i++) {
+    tabla += "<tr>";
+    for (let j = 0; j < numColumnas; j++) {
+        tabla += `<td style="height: ${altura}; width: ${ancho}">Celda (${i+1},${j+1})</td>`;
+    }
+    tabla += "</tr>";
+}
+tabla += "</table>";
+
+// Escribimos el código HTML de la tabla en la página
+document.write(tabla);
+
+
+/*Este programa utiliza dos bucles for anidados para recorrer las filas y columnas de la tabla y generar el código HTML correspondiente. Luego, utiliza la función document.write() para escribir el código HTML en la página web. La variable i se utiliza para controlar el índice de la fila y la variable j se utiliza para controlar el índice de la columna.
+*/
+   </script>
+</body>
+</html>
+

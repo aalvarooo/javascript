@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Creamos un nuevo objeto Date
+        let fechaActual = new Date();
+
+        // Obtenemos el número del mes actual (0-11)
+        let numeroMes = fechaActual.getMonth();
+
+        // Creamos un array con los nombres de los meses
+        let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+            "Noviembre", "Diciembre"
+        ];
+
+        // Obtenemos el nombre del mes actual a partir del array de meses y del número del mes actual
+        let nombreMes = meses[numeroMes];
+
+        // Mostramos el nombre del mes actual en la consola
+        console.log(`Estamos en ${nombreMes}`);
+
+
+
+        /*
+Este código crea un objeto Date que representa 
+la fecha y hora actual, luego obtiene el número 
+del mes actual (0-11) utilizando el método getMonth() 
+del objeto Date. A continuación, crea un array con los 
+nombres de los meses y utiliza el número del mes actual 
+como índice para obtener el nombre del mes actual del 
+array. Finalmente, muestra el nombre del mes actual
+ en la consola utilizando console.log().
+
+        */
+    </script>
+</body>
+
+</html>

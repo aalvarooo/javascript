@@ -1,0 +1,25 @@
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Estilos para las filas pares de la tabla */
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Estilos para los títulos de las columnas */
+  table th {
+    text-align: left;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para las celdas de la tabla */
+  table td {
+    text-align: left;
+    padding: 8px;
+  }
+  

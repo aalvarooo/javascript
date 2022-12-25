@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+/*Puedes utilizar el método forEach de los arrays para mostrar el nombre de los meses del primer array y el nombre de los meses de vacaciones del segundo array. Este método itera sobre cada elemento del array y ejecuta una función proporcionada para cada elemento.
+
+Aquí tienes un ejemplo de */$
+
+ 
+
+ const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const vacaciones = ['Julio', 'Agosto', 'Septiembre'];
+
+// Mostramos los meses del primer array
+console.log('Meses:');
+meses.forEach(function(mes) {
+  console.log(mes);
+});
+
+// Mostramos los meses de vacaciones del segundo array
+console.log('\nMeses de vacaciones:');
+vacaciones.forEach(function(mes) {
+  console.log(mes);
+});
+
+/*Para mostrar el nombre de los meses y los meses de vacaciones en la página web, en lugar de en la consola, puedes utilizar la propiedad innerHTML de los elementos del DOM (Document Object Model) para modificar el contenido de un elemento del HTML.
+
+Por ejemplo, supongamos que tienes un elemento con una etiqueta div con un id de "meses" y otro elemento con una etiqueta div con un id de "vacaciones". Puedes utilizar la siguiente lógica para mostrar el nombre de los meses y los meses de vacaciones en la página web:
+
+Obtén los elementos del DOM con los id "meses" y "vacaciones" utilizando la función document.getElementById.
+Utiliza el método forEach de los arrays para iterar sobre cada elemento del array de meses y del array de vacaciones.
+Utiliza la propiedad innerHTML de los elementos del DOM para modificar su contenido y mostrar el nombre de cada mes o mes de vacaciones.
+Aquí tienes un ejemplo de código que muestra cómo podrías hacerlo:
+*/
+
+
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const vacaciones = ['Julio', 'Agosto', 'Septiembre'];
+
+// Obtenemos los elementos del DOM
+const elementoMeses = document.getElementById('meses');
+const elementoVacaciones = document.getElementById('vacaciones');
+
+// Creamos una cadena de texto con el nombre de los meses
+let mesesHTML = '<p>Meses:</p><ul>';
+meses.forEach(function(mes) {
+  mesesHTML += `<li>${mes}</li>`;
+});
+mesesHTML += '</ul>';
+
+// Creamos una cadena de texto con el nombre de los meses de vacaciones
+let vacacionesHTML = '<p>Meses de vacaciones:</p><ul>';
+vacaciones.forEach(function(mes) {
+  vacacionesHTML += `<li>${mes}</li>`;
+});
+vacacionesHTML += '</ul>';
+
+// Modificamos el contenido de los elementos del DOM con el contenido generado
+elementoMeses.innerHTML = mesesHTML;
+elementoVacaciones.innerHTML = vacacionesHTML;
+
+
+    </script>
+</body>
+</html>

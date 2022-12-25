@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// función que determina si una cadena es un palíndromo
+function esPalindromo(cadena) {
+  // eliminamos los espacios en blanco y los signos de puntuación de la cadena
+  // utilizando expresiones regulares
+  const sinEspacios = cadena.replace(/\s+/g, '').replace(/[^\w]/g, '');
+  // convertimos la cadena a minúsculas
+  const minusculas = sinEspacios.toLowerCase();
+  // utilizamos el método split() para dividir la cadena en un array de caracteres
+  const caracteres = minusculas.split('');
+  // utilizamos el método reverse() para invertir el orden de los elementos del array
+  const invertida = caracteres.reverse();
+  // utilizamos el método join() para unir los elementos del array en una cadena
+  const invertidaString = invertida.join('');
+  // comparamos la cadena original con la cadena invertida y devolvemos el resultado
+  return minusculas === invertidaString;
+}
+
+
+// ejemplos de uso de la función
+console.log(esPalindromo('Ana lleva al oso la avellana')); // true
+console.log(esPalindromo('Sale el as')); // true
+console.log(esPalindromo('Isaac no ronca asi')); // false
+console.log(esPalindromo('Luz azul')); // true
+console.log(esPalindromo('1234567890')); // false
+
+
+/*En este ejemplo, la función esPalindromo elimina los espacios en blanco y los signos de puntuación de la cadena utilizando expresiones regulares. Luego convierte la cadena a minúsculas y utiliza el método split() para dividirla en un array de caracteres. A continuación, invierte el orden de los elementos del array y los une en una cadena utilizando el método join(). Finalmente, se compara la cadena original con la cadena invertida y se devuelve el resultado.
+*/
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*Para crear un programa en JavaScript que consista en adivinar un número previamente introducido por el jugador 1, podemos utilizar la función prompt() para solicitar el número al jugador 1 y la función parseInt() para convertirlo a un entero. A continuación, se presenta un ejemplo de cómo podría hacerse:
+
+*/
+
+        // Pedimos al jugador 1 que ingrese el número a adivinar
+let numero = prompt("Jugador 1: Ingrese el número a adivinar: ");
+
+// Convertimos el número a un entero
+numero = parseInt(numero);
+
+// Inicializamos un contador de intentos en cero
+let contador = 0;
+
+// Mientras el jugador 2 no acierte el número, seguimos pidiendo números
+while (true) {
+    // Pedimos al jugador 2 que ingrese un número
+    let intento = prompt("Jugador 2: Ingrese un número: ");
+
+    // Convertimos el número a un entero
+    intento = parseInt(intento);
+
+    // Incrementamos el contador de intentos en una unidad
+    contador++;
+
+    // Si el número es igual al número a adivinar, mostramos el mensaje de victoria y terminamos el juego
+    if (intento == numero) {
+        alert(`¡Felicidades! Has adivinado el número en ${contador} intentos.`);
+        break;
+    }
+    // Si el número es mayor que el número a adivinar, damos una pista al jugador 2
+    else if (intento > numero) {
+        alert("Tu número es mayor que el número a adivinar. Intenta con un número más pequeño.");
+    }
+    // Si el número es menor que el número a adivinar, damos una pista al jugador 2
+    else {
+        alert("Tu número es menor que el número a adivinar. Intenta con un número más grande.");
+    }
+}
+    </script>
+</body>
+</html>
